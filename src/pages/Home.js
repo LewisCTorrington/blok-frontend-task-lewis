@@ -10,6 +10,9 @@ import lightning from '../assets/icons/lightning.svg';
 import heart from '../assets/icons/heart.svg';
 import star from '../assets/icons/star.svg';
 
+import '../styles/body.scss';
+import '../styles/home.scss';
+
 export const Home = (props) => {
 
     function switchComponent (component) {
@@ -17,35 +20,37 @@ export const Home = (props) => {
     }
 
     return (
-        <div>
-            <h3>INSTANT DIGITAL VALUATION</h3>
-            <h1>What type of building are you valuating?</h1>
-            <div className="realty-option-container">
-                <Button variant="contained" color="primary"
-                    onClick={() => switchComponent("apartment-form-controller") }>
-                    <img src={ apartment_house } alt="apartment_house" style={{ height: "20px" }} />
-                    Apartment   
-                </Button>
-
-                <Button variant="contained" color="primary">
-                    <img src={ terraced_house } alt="terraced_house" style={{ height: "20px" }} />
-                    Terraced</Button>
-                <Button variant="contained" color="primary">
-                    <img src={ semidetached_house } alt="semidetached_house" style={{ height: "20px" }} />
-                    Semi Detached</Button>
-                <Button variant="contained" color="primary">
-                    <img src={ detached_house } alt="detached_house" style={{ height: "20px" }} />
-                    Detached</Button>
-            </div>
+        <div className="body-container">
             <div>
-                <p><img src={ lightning } alt="lightning" style={{ height: "20px" }} />
-                2min instant digital valuation</p>
+                <h3>INSTANT DIGITAL VALUATION</h3>
+                <h1>What type of building are you valuating?</h1>
+                <div className="realty-options-container">
+                    <Button className="realty-option" variant="contained" color="primary"
+                        onClick={() => switchComponent("apartment-form-controller") }>
+                        <img className="realty-option-img" src={ apartment_house } alt="apartment_house" />
+                        Apartment   
+                    </Button>
 
-                <p><img src={ heart } alt="heart" style={{ height: "20px" }} />
-                364 168 valuations made since 2018</p>
+                    <Button className="realty-option" variant="contained" color="primary">
+                        <img className="realty-option-img" src={ terraced_house } alt="terraced_house" />
+                        Terraced</Button>
+                    <Button className="realty-option" variant="contained" color="primary">
+                        <img className="realty-option-img" src={ semidetached_house } alt="semidetached_house" />
+                        Semi Detached</Button>
+                    <Button className="realty-option" variant="contained" color="primary">
+                        <img className="realty-option-img" src={ detached_house } alt="detached_house" />
+                        Detached</Button>
+                </div>
+                <div>
+                    <p><img src={ lightning } alt="lightning" style={{ height: "20px" }} />
+                    2min instant digital valuation</p>
 
-                <p><img src={ star } alt="star" style={{ height: "20px" }} />
-                4,8 rating on Google (brokers average 3,2)</p>
+                    <p><img src={ heart } alt="heart" style={{ height: "20px" }} />
+                    364 168 valuations made since 2018</p>
+
+                    <p><img src={ star } alt="star" style={{ height: "20px" }} />
+                    4,8 rating on Google (brokers average 3,2)</p>
+                </div>
             </div>
         </div>
     );

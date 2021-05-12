@@ -3,6 +3,7 @@ import { Body, SwitchComponents, FormNavigation } from './';
 import { RoomsInput, SizeInput } from '../pages';
 import { CSSTransitionGroup } from 'react-transition-group'
 
+import '../styles/body.scss';
 import '../styles/transitions.scss';
 
 export const ApartmentFormController = (props) => {
@@ -35,22 +36,24 @@ export const ApartmentFormController = (props) => {
 
   return (
     <div>
-      <CSSTransitionGroup
-        transitionName="example"
-        transitionAppear={true}
-        transitionAppearTimeout={500}
-        transitionEnterTimeout={300}
-        transitionLeaveTimeout={300}
-        transitionEnter={true}
-        transitionLeave={true}>
+      <div className="body-container">
+        <CSSTransitionGroup
+          transitionName="example"
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}
+          transitionEnter={true}
+          transitionLeave={true}>
 
-        <SwitchComponents active = { formOrder[activeComponentOrderIndex] }>
-          <Body name = "rooms-input" bodyElement = { <RoomsInput /> }/>
-          <Body name = "size-input" bodyElement = { <SizeInput /> }/>
+          <SwitchComponents active = { formOrder[activeComponentOrderIndex] }>
+            <Body name = "rooms-input" bodyElement = { <RoomsInput /> }/>
+            <Body name = "size-input" bodyElement = { <SizeInput /> }/>
 
-        </SwitchComponents>
+          </SwitchComponents>
 
-      </CSSTransitionGroup>
+        </CSSTransitionGroup>
+      </div>
 
       <CSSTransitionGroup
         transitionName="example"

@@ -13,7 +13,7 @@ const theme = createMuiTheme({
 
 export const Body = (props) => {
   return (
-    <div className="body-container">
+    <div>
         <MuiThemeProvider theme={theme}>
           { props.bodyElement }
         </MuiThemeProvider>
