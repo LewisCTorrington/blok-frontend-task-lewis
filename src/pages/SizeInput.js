@@ -3,6 +3,8 @@ import Slider from '@material-ui/core/Slider';
 
 import size from '../assets/icons/size.svg';
 
+import '../styles/form-body.scss';
+
 export const SizeInput = () => {
   const marks = [
     {
@@ -22,7 +24,7 @@ export const SizeInput = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
         <h1>How big is the apartment?</h1>
         <img src={ size } alt="size" style={{ height: "60px" }} />
         <Slider 

@@ -3,6 +3,8 @@ import Slider from '@material-ui/core/Slider';
 
 import rooms from '../assets/icons/rooms.svg';
 
+import '../styles/form-body.scss';
+
 export const RoomsInput = () => {
   const marks = [
     {
@@ -22,7 +24,7 @@ export const RoomsInput = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
         <h1>How many rooms does it have?</h1>
         <img src={ rooms } alt="rooms" style={{ height: "60px" }} />
         <Slider 

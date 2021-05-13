@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Body, SwitchComponents, FormNavigation } from './';
 import { RoomsInput, SizeInput } from '../pages';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import { CSSTransitionGroup } from 'react-transition-group'
 
 import '../styles/body.scss';
+import '../styles/apartment-form-controller.scss';
 import '../styles/transitions.scss';
 
 export const ApartmentFormController = (props) => {
+
+  const [progress, setProgress] = React.useState(10);
   const [activeComponentOrderIndex, setActiveComponentOrderIndex] = useState(0)
 
   const formOrder = [
@@ -16,6 +20,8 @@ export const ApartmentFormController = (props) => {
   ];
 
   useEffect(() => {
+    setProgress((activeComponentOrderIndex + 1) * 10);
+
     if (activeComponentOrderIndex < 0
        || activeComponentOrderIndex >= formOrder.length) {
       switchToHome();
@@ -36,6 +42,8 @@ export const ApartmentFormController = (props) => {
 
   return (
     <div>
+      <LinearProgress variant="determinate" value={progress} />
+
       <div className="body-container">
         <CSSTransitionGroup
           transitionName="example"
