@@ -22,34 +22,38 @@ export const Home = (props) => {
     return (
         <div className="body-container">
             <div>
-                <h3>INSTANT DIGITAL VALUATION</h3>
+                <h5>INSTANT DIGITAL VALUATION</h5>
                 <h1>What type of building are you valuating?</h1>
                 <div className="realty-options-container">
                     <Button className="realty-option" variant="contained" color="primary"
                         onClick={() => switchComponent("apartment-form-controller") }>
                         <img className="realty-option-img" src={ apartment_house } alt="apartment_house" />
-                        Apartment   
+                        <div>Apartment</div>
                     </Button>
 
                     <Button className="realty-option" variant="contained" color="primary">
                         <img className="realty-option-img" src={ terraced_house } alt="terraced_house" />
-                        Terraced</Button>
+                        <div>Terraced</div></Button>
                     <Button className="realty-option" variant="contained" color="primary">
                         <img className="realty-option-img" src={ semidetached_house } alt="semidetached_house" />
-                        Semi Detached</Button>
+                        <div>Semi Detached</div></Button>
                     <Button className="realty-option" variant="contained" color="primary">
                         <img className="realty-option-img" src={ detached_house } alt="detached_house" />
-                        Detached</Button>
+                        <div>Detached</div></Button>
                 </div>
-                <div>
-                    <p><img src={ lightning } alt="lightning" style={{ height: "20px" }} />
-                    2min instant digital valuation</p>
-
-                    <p><img src={ heart } alt="heart" style={{ height: "20px" }} />
-                    364 168 valuations made since 2018</p>
-
-                    <p><img src={ star } alt="star" style={{ height: "20px" }} />
-                    4,8 rating on Google (brokers average 3,2)</p>
+                <div className="stats-container">
+                    <li className="stats-item-container">
+                        <img className="stats-img" src={ lightning } alt="lightning" />
+                        <div><b>2min</b> instant digital valuation</div>
+                    </li>
+                    <li className="stats-item-container">
+                        <img className="stats-img" src={ heart } alt="heart" />
+                        <div><b>364 168</b> valuations made since 2018</div>
+                    </li>
+                    <li className="stats-item-container">
+                        <img className="stats-img" src={ star } alt="star" />
+                        <div><b>4,8</b> rating on Google (brokers average 3,2)</div>
+                    </li>
                 </div>
             </div>
         </div>

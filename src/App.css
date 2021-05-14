@@ -1,6 +1,12 @@
+@font-face {
+  font-family: 'Dalton Maag';
+  src: local('Dalton Maag'), url('./assets/font/Dalton Maag - Objektiv Mk1.ttf') format('truetype');
+}
+
 body {
   background-color: #1e3757;
   color: white;
+  font-family: 'Dalton Maag';
 }
 
 .container {

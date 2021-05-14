@@ -34,7 +34,7 @@ export const RoomsInput = () => {
   return (
     <div className="form-container">
         <h1>How many rooms does it have?</h1>
-        <img src={ rooms } alt="rooms" style={{ height: "60px" }} />
+        <img className="header-icon-img" src={ rooms } alt="rooms" />
         <Slider 
           value={ value } 
           onChange={ handleChange } 

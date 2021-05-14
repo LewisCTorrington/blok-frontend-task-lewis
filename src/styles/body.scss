@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Dalton Maag Bold';
+  src: local('Dalton Maag Bold'), url('../assets/font/Dalton Maag - Objektiv Mk1 Bold.ttf') format('truetype');
+}
+
+h1, b {
+    font-family: 'Dalton Maag Bold';
+}
+
 .body-container {
     display: flex;
     padding: 0 24px 24px 24px;

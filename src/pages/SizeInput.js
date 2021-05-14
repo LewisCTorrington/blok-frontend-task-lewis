@@ -34,7 +34,7 @@ export const SizeInput = () => {
   return (
     <div className="form-container">
         <h1>How big is the apartment?</h1>
-        <img src={ size } alt="size" style={{ height: "60px" }} />
+        <img className="header-icon-img" src={ size } alt="size" />
         <Slider 
           value={ value } 
           onChange={ handleChange } 

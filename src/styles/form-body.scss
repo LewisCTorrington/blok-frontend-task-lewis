@@ -4,6 +4,11 @@
     text-align: center;
 }
 
+.header-icon-img {
+    height: 60px;
+    margin-bottom: 3em;
+}
+
 .secondary-form-input {
     background-color: white;
     text-align: center  !important;
@@ -14,4 +19,8 @@
 .secondary-form-input:focus-visible {
     outline: none !important;
     box-shadow: 0 0 0 2px #8DD3D9;
+}
+
+.MuiSlider-marklabel-40, .MuiSlider-markLabelActive-41, .MuiSlider-markLabel-17, .MuiSlider-markLabelActive-18 {
+    color: rgba(86, 141, 179, 0.5) !important;
 }
