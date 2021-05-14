@@ -19,6 +19,7 @@ export const ApartmentFormController = (props) => {
     // More form fields, plus an actual form submission page would be entered here
   ];
 
+  // eslint-disable-next-line
   useEffect(() => {
     setProgress((activeComponentOrderIndex + 1) * 10);
 

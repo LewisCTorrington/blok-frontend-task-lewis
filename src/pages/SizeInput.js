@@ -23,18 +23,33 @@ export const SizeInput = () => {
     setValue(newValue);
   };
 
+  const handleSecondaryInputChange = (event) => {
+    let newValue = event.target.value;
+    newValue = Number(newValue);
+    if(newValue && (marks[0].value <= newValue <= marks[1].value)) {
+      setValue(newValue);
+    }
+  };
+
   return (
     <div className="form-container">
         <h1>How big is the apartment?</h1>
         <img src={ size } alt="size" style={{ height: "60px" }} />
         <Slider 
-          value={value} 
-          onChange={handleChange} 
+          value={ value } 
+          onChange={ handleChange } 
           aria-labelledby="continuous-slider"
-          min={marks[0].value}
-          max={marks[1].value}
-          marks={marks} 
+          min={ marks[0].value }
+          max={ marks[1].value }
+          marks={ marks } 
           valueLabelDisplay="on" />
+
+          <input 
+            className="secondary-form-input"
+            type="number"
+            variant="outlined"
+            value={ value } 
+            onChange={ handleSecondaryInputChange } />
     </div>
   );
 }

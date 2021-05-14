@@ -3,3 +3,15 @@
     flex-direction: column;
     text-align: center;
 }
+
+.secondary-form-input {
+    background-color: white;
+    text-align: center  !important;
+    border-radius: 24px;
+    height: 36px !important;
+}
+
+.secondary-form-input:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 2px #8DD3D9;
+}
