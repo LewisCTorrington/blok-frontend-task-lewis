@@ -29,6 +29,20 @@ body {
   right: 0; 
   bottom: 0; 
   margin: auto; 
+  margin-left: -45em;
   min-width: 50%;
   min-height: 50%;
 }
+
+@media only screen and (min-width: 768px) {
+  .bg img {
+    margin-left: -25em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .bg img {
+    margin-left: 0;
+  }
+}
+
